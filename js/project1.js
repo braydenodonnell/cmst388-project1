@@ -92,8 +92,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const currentColor = window.getComputedStyle(box).backgroundColor;
         if (currentColor === boxColor) {
           // TODO: element backgroundColor currently has boxColor set, change it to 'white'
+          box.style.backgroundColor = 'white';
         } else {
           // TODO: element backgroundColor currently does not have boxcolor set, set it to boxColor
+          box.style.backgroundColor = boxColor;
         }
       });
     });
@@ -104,6 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
     .addEventListener('click', () => {
       document.querySelectorAll('.box').forEach(box => {
         // TODO: Add a toggle to box.classList and toggle the CSS 'round-edge' class
+        box.classList.toggle('round-edge');
       });
     });
 });
